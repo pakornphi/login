@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row; /* แบ่งเป็นสองฝั่ง (ซ้าย-ขวา) */
+  flex-direction: row; 
   height: 100vh;
 }
 
@@ -20,38 +20,38 @@ body {
 }
 
 .left-side {
-  flex: 1; /* ใช้พื้นที่เท่ากับฝั่งขวา */
-  background-color: #ffffff; /* สีพื้นหลัง */
-  display: flex; /* ใช้ flexbox */
-  flex-direction: column; /* ให้เนื้อหาจัดเรียงในแนวตั้ง */
-  justify-content: center; /* จัดให้อยู่กลางในแนวตั้ง */
-  align-items: center; /* จัดให้อยู่กลางในแนวนอน */
-  height: 100vh; /* ให้สูงเต็มหน้าจอ */
+  flex: 1; 
+  background-color: #ffffff; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
-/* กำหนดสไตล์ของ h2 และ h3 */
+
 .left-side h2 {
-  margin-bottom: 10px; /* ระยะห่างระหว่าง h2 กับ p */
+  margin-bottom: 10px; 
   font-size: 2.5em;
   color: #092857;
 }
 
 .left-side h3 {
   margin-top: 0;
-  font-size: 1.2em; /* ขนาดตัวอักษร */
+  font-size: 1.2em; 
   font-size: 2.5em;
-  color: #092857; /* สีตัวอักษร */
+  color: #092857; 
 }
 
-/* กำหนดรูปแบบให้โลโก้ */
+
 .logo {
-  max-width: 80%; /* ขนาดโลโก้สูงสุด 80% ของความกว้างของฝั่งซ้าย */
-  height: auto; /* รักษาสัดส่วนของโลโก้ */
+  max-width: 80%; 
+  height: auto; 
 }
 
 .right-side {
-  flex: 1; /* ใช้พื้นที่เท่ากัน */
-  background-color: #ffffff; /* พื้นหลังขาว */
+  flex: 1; 
+  background-color: #ffffff; 
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -115,12 +115,11 @@ p {
   margin-top: 20px;
 }
 
-/* Style for the register link */
+
 .register-link {
   margin-top: 20px;
 }
 
-/* Footer Bar Styling */
 .footer {
   background-color: #0A7AF9;
   color: white;
