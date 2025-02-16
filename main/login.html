@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="left-side">
-    <!-- สามารถใส่คอนเทนต์อื่นๆ ที่คุณต้องการที่นี่ -->
+ 
     <img src="/picture/logo-Photoroom.png" alt="Cybercheck Logo" class="logo" />
     <h2>Cybercheck</h2>
     <h3>security testing</h3>
@@ -24,13 +24,13 @@
         <button type="submit">Login</button>
       </form>
 
-      <p class="success" id="successMessage"></p> <!-- Success message -->
+      <p class="success" id="successMessage"></p> 
 
       <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
     </div>
   </div>
 
-  <!-- Footer bar added at the bottom -->
+  
   <footer class="footer">
   </footer>
 
@@ -48,7 +48,7 @@
 
       let hasError = false;
 
-      // Input validation
+      
       if (!data.username) {
         document.getElementById('usernameError').textContent = 'Username is required.';
         hasError = true;
@@ -70,15 +70,15 @@
         const result = await response.json();
 
         if (response.ok) {
-          // Show success message
+          
           document.getElementById('successMessage').textContent = 'Login successful!';
           
-          // Redirect after 500ms
+          
           setTimeout(() => {
             window.location.href = 'index.html';
           }, 500);
         } else {
-          // Show error message
+         
           if (result.error.includes('Username')) {
             document.getElementById('usernameError').textContent = result.error;
           } else if (result.error.includes('Password')) {

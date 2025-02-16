@@ -1,46 +1,46 @@
-/* ตั้งค่าเบื้องต้นให้กับ body */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row; /* แบ่งเป็นสองฝั่ง (ซ้าย-ขวา) */
+    flex-direction: row; 
     height: 100vh;
   }
 .left-side {
-    flex: 1; /* ใช้พื้นที่เท่ากับฝั่งขวา */
-    background-color: #ffffff; /* สีพื้นหลัง */
-    display: flex; /* ใช้ flexbox */
-    flex-direction: column; /* ให้เนื้อหาจัดเรียงในแนวตั้ง */
-    justify-content: center; /* จัดให้อยู่กลางในแนวตั้ง */
-    align-items: center; /* จัดให้อยู่กลางในแนวนอน */
-    height: 100vh; /* ให้สูงเต็มหน้าจอ */
+    flex: 1; 
+    background-color: #ffffff;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
   }
   
-  /* กำหนดสไตล์ของ h2 และ h3 */
+ 
   .left-side h2 {
-    margin-bottom: 10px; /* ระยะห่างระหว่าง h2 กับ p */
+    margin-bottom: 10px; 
     font-size: 2.5em;
     color: #092857;
   }
   
   .left-side h3 {
     margin-top: 0;
-    font-size: 1.2em; /* ขนาดตัวอักษร */
+    font-size: 1.2em; 
     font-size: 2.5em;
-    color: #092857; /* สีตัวอักษร */
+    color: #092857;
   }
   
-  /* กำหนดรูปแบบให้โลโก้ */
+ 
 .logo {
-    max-width: 80%; /* ขนาดโลโก้สูงสุด 80% ของความกว้างของฝั่งซ้าย */
-    height: auto; /* รักษาสัดส่วนของโลโก้ */
+    max-width: 80%; 
+    height: auto; 
   }
   
-  /* ฝั่งขวา */
+ 
   .right-side {
-    flex: 1; /* ใช้พื้นที่เท่ากัน */
-    background-color: #ffffff; /* พื้นหลังขาว */
+    flex: 1; 
+    background-color: #ffffff;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@ body {
     margin-top: 0;
   }
   
-  /* ฟอร์มการสมัคร */
+  
   form {
     width: 500px;
     padding: 10px;
@@ -62,14 +62,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* กำหนดสไตล์ให้กับ label */
+ 
   label {
     display: block;
     margin: 5px 0 5px;
     font-weight: bold;
   }
   
-  /* กำหนดสไตล์ให้กับ input */
+  
   input[type="email"],
   input[type="text"],
   input[type="password"] {
@@ -81,7 +81,7 @@ body {
     box-sizing: border-box;
   }
   
-  /* ปุ่มลงทะเบียน */
+  
   button {
     width: 100%;
     padding: 10px;
@@ -92,18 +92,18 @@ body {
     cursor: pointer;
   }
   
-  /* เมื่อ hover ปุ่ม */
+  
   button:hover {
     background-color: #3A5B22;
   }
   
-  /* ส่วนของข้อความผิดพลาด */
+
   .error {
     color: red;
     font-size: 0.9em;
   }
   
-  /* Footer bar ด้านล่าง */
+  
   #footer-bar {
     background-color: #0A7AF9;
     color: white;
