@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="left-side">
+    <!-- สามารถใส่คอนเทนต์อื่นๆ ที่คุณต้องการที่นี่ -->
+    <img src="/picture/logo-Photoroom.png" alt="Cybercheck Logo" class="logo" />
+    <h2>Cybercheck</h2>
+    <h3>security testing</h3>
+  </div>
+    <div class="right-side">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <label>Username: <input type="text" name="username" /></label><br />
+        <span class="error" id="usernameError"></span><br />
+
+        <label>Password: <input type="password" name="password" /></label><br />
+        <span class="error" id="passwordError"></span><br />
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="success" id="successMessage"></p> <!-- Success message -->
+
+      <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- Footer bar added at the bottom -->
+  <footer class="footer">
+  </footer>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      document.getElementById('usernameError').textContent = '';
+      document.getElementById('passwordError').textContent = '';
+      document.getElementById('successMessage').textContent = '';
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      let hasError = false;
+
+      // Input validation
+      if (!data.username) {
+        document.getElementById('usernameError').textContent = 'Username is required.';
+        hasError = true;
+      }
+      if (!data.password) {
+        document.getElementById('passwordError').textContent = 'Password is required.';
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      try {
+        const response = await fetch('http://localhost:8000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          // Show success message
+          document.getElementById('successMessage').textContent = 'Login successful!';
+          
+          // Redirect after 500ms
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 500);
+        } else {
+          // Show error message
+          if (result.error.includes('Username')) {
+            document.getElementById('usernameError').textContent = result.error;
+          } else if (result.error.includes('Password')) {
+            document.getElementById('passwordError').textContent = result.error;
+          } else {
+            alert(result.error || 'Login failed');
+          }
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Error connecting to the server.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row; /* แบ่งเป็นสองฝั่ง (ซ้าย-ขวา) */
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  height: 80%;
+}
+
+.left-side {
+  flex: 1; /* ใช้พื้นที่เท่ากับฝั่งขวา */
+  background-color: #ffffff; /* สีพื้นหลัง */
+  display: flex; /* ใช้ flexbox */
+  flex-direction: column; /* ให้เนื้อหาจัดเรียงในแนวตั้ง */
+  justify-content: center; /* จัดให้อยู่กลางในแนวตั้ง */
+  align-items: center; /* จัดให้อยู่กลางในแนวนอน */
+  height: 100vh; /* ให้สูงเต็มหน้าจอ */
+}
+
+/* กำหนดสไตล์ของ h2 และ h3 */
+.left-side h2 {
+  margin-bottom: 10px; /* ระยะห่างระหว่าง h2 กับ p */
+  font-size: 2.5em;
+  color: #092857;
+}
+
+.left-side h3 {
+  margin-top: 0;
+  font-size: 1.2em; /* ขนาดตัวอักษร */
+  font-size: 2.5em;
+  color: #092857; /* สีตัวอักษร */
+}
+
+/* กำหนดรูปแบบให้โลโก้ */
+.logo {
+  max-width: 80%; /* ขนาดโลโก้สูงสุด 80% ของความกว้างของฝั่งซ้าย */
+  height: auto; /* รักษาสัดส่วนของโลโก้ */
+}
+
+.right-side {
+  flex: 1; /* ใช้พื้นที่เท่ากัน */
+  background-color: #ffffff; /* พื้นหลังขาว */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 500px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.success {
+  color: green;
+  font-size: 0.9em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3A5B22;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Style for the register link */
+.register-link {
+  margin-top: 20px;
+}
+
+/* Footer Bar Styling */
+.footer {
+  background-color: #0A7AF9;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
